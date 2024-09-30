@@ -15,7 +15,7 @@
 
 .icon2 {
     position: absolute;
-    bottom: -14%;
+    bottom: -13%;
     left: 6%;
 }
 
@@ -27,10 +27,12 @@
 
 .container {
     display: flex;
+    /* padding: 0 15px; */
 }
 
 .about-area-row {
     max-width: 50%;
+    padding: 0 15px;
 }
 
 .about-area-row h3 {
@@ -84,4 +86,23 @@ li span {
 
 .about-area-img {
     max-width: 50%;
+    /* padding: 0 15px; */
+}
+
+.about-img img {
+    position: relative;
+    border-radius: 20px;
+    
+}
+
+.big-img {
+    padding-left: 80px;
+}
+
+.small-img {
+    position: absolute;
+    margin-top: -185px;
+    border-radius: 20px;
+    border: 10px solid #fff;
+    
 }

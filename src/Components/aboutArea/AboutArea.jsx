@@ -3,6 +3,8 @@ import icon2 from "../../img/icon/2.png"
 import icon3 from "../../img/icon/3.png"
 import salad from "../../img/svg_icon/salad.svg"
 import tray from "../../img/svg_icon/tray.svg"
+import big from "../../img/about/big.png"
+import small from "../../img/about/small.png"
 import "./style.css"
 
 const AboutArea = () => {
@@ -40,7 +42,12 @@ const AboutArea = () => {
                 </div>
                 <div className="about-area-img">
                     <div className="about-img">
-                        
+                        <div className="big-img">
+                            <img src={big} alt="big" className="big"/>
+                        </div>
+                        <div className="small-img">
+                            <img src={small} alt="small" className="small"/>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,67 @@
+.delicious-area {
+    padding-top: 150px;
+    padding-bottom: 110px;
+    display: flex;
+    justify-content: center;
+}
+
+.delicious-area .container {
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.delicious-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.delicious-title h3{
+    margin: 0 0 50px;
+    font-family: "Philosopher", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #001D38;
+}
+
+.tablist-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid #E5E8EA;
+    margin-bottom: 60px;
+}
+
+.menu-nav {
+    display: flex;
+}
+
+.menu-nav li {
+    margin: 0 25px;
+    padding: 0 12px 27px;
+}
+
+.nav-item-row {
+    width: 75px;
+    height: 76.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item-row img{
+    width: 50px;
+    height: 50px;
+}
+
+.nav-item h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #596672;
+    text-align: center;
+}
+
+
+
+
