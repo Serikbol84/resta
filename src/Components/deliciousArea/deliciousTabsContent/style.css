@@ -1,0 +1,49 @@
+.delicious-tabs-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.single-delicious-card {
+    padding: 0 15px;
+    flex: 0 0 47%;
+}
+
+.single-delicious {
+    display: flex;
+    margin-bottom: 50px;
+    align-items: center;
+}
+
+.delicious-pic {
+    width: 166px;
+    height: 166px;
+}
+
+.delicious-info {
+    padding-left: 28px;
+    /* height: 147px; */
+    
+}
+
+.delicious-info h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 400;
+    color: #001D38;
+    line-height: 1.2em;
+}
+
+.delicious-info p {
+    margin: 15px 0 16px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #596672;
+}
+
+.delicious-info span {
+    display: block;
+    font-weight: 400;
+    font-size: 26px;
+    color: #DB9A64;
+}
