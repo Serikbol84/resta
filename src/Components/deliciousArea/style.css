@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Flaticon';
+    src: url('../../fonts/Flaticon.woff2') format('woff2'),
+         url('../../fonts/Flaticon.woff') format('woff'),
+         url('../../fonts/Flaticon.eot') format('eot'),
+         url('../../fonts/Flaticon.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
 .delicious-area {
     padding-top: 150px;
     padding-bottom: 110px;
@@ -39,6 +51,40 @@
 .menu-nav li {
     margin: 0 25px;
     padding: 0 12px 27px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* нижнее подчеркивание активного таба */
+.menu-nav li.active::after { 
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    height: 2px;
+    background: #DB9A64;
+    display: block;
+}
+
+.icon {
+    padding: 0;
+    font-family: 'Flaticon';
+    font-size: 50px;
+    color: #596672;
+}
+
+/* Задаем иконки с помощью кода в шрифте Flaticon каждому табу.  */
+.icon-of-dinner::before { 
+    content: '\f102';
+}
+
+.icon-of-breakfast::before {
+    content: '\f100';
+}
+
+.icon-of-lunch::before {
+    content: '\f101';
 }
 
 .nav-item-row {
@@ -49,11 +95,6 @@
     align-items: center;
 }
 
-.nav-item-row img{
-    width: 50px;
-    height: 50px;
-}
-
 .nav-item h4 {
     margin: 0;
     font-size: 16px;
@@ -61,6 +102,13 @@
     color: #596672;
     text-align: center;
 }
+
+.nav-item.active .icon, 
+.nav-item.active h4 {
+    color: #DB9A64;
+}
+
+
 
 
 

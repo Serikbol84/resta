@@ -1,12 +1,12 @@
 
-import contentData from "./contentData";
+// import contentData from "./contentData";
 import "./style.css"
 
 
-const DeliciousTabsContent = () => {
+const DeliciousTabsContent = ({ content }) => {
     return (
         <div className="delicious-tabs-content">
-            {contentData.dinner.map((item) => (
+            {content.map((item) => (
                 <div className="single-delicious-card" key={item.id}>
                     <div className="single-delicious">
                         <div className="delicious-pic">

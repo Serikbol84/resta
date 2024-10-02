@@ -1,16 +1,19 @@
-import dinner from "../../img/svg_icon/dinner.svg"
-import cofee from "../../img/svg_icon/cofee.svg"
-import fork from "../../img/svg_icon/fork.svg"
-import "./style.css"
-import DeliciousTabsContent from "./deliciousTabsContent/DeliciousTabsContent";
 
+import DeliciousTabsContent from "./deliciousTabsContent/DeliciousTabsContent";
+import { useState } from "react";
+import contentData from "./deliciousTabsContent/contentData";
+import "./style.css"
+
+// Массив с объектами tabs которые мы замапили ниже, чтобы не дублировать элементы li
 const tabs = [
-    {src: dinner, alt: 'Dinner icon', text: 'Dinner'},
-    {src: cofee, alt: 'Cofee icon', text: 'Breakfast'},
-    {src: fork, alt: 'Fork icon', text: 'Lunch'}
+    {id: 'dinner', iconCode: 'icon-of-dinner', text: 'Dinner'}, // icon-of-dinner, icon-of-breakfast, icon-of-lunch - в css передаем каждому соответствующий код иконки через контент
+    {id: 'breakfast', iconCode: 'icon-of-breakfast', text: 'Breakfast'},
+    {id: 'lunch', iconCode: 'icon-of-lunch', text: 'Lunch'}
 ];
 
 const DeliciousArea = () => {
+    const [activeTab, setActiveTab] = useState('dinner'); // Начальное состояние для табов. Поумолчанию это таб "dinner"
+
     return (
         <div className="delicious-area">
             <div className="container">
@@ -20,16 +23,15 @@ const DeliciousArea = () => {
 
                 <div className="tablist-menu" role="tablist">
                     <ul className="menu-nav">
-                        {tabs.map((tab, index) => (
-                            <li className="nav-item" role="presentation" key={index}>
-                                <div className="nav-item-row">
-                                    <img 
-                                        src={tab.src} 
-                                        alt={tab.alt} 
-                                        role="tab" 
-                                        tabIndex="0" 
-                                        onClick={() => console.log(`${tab.text} tab clicked`)} 
-                                    /> 
+                        {tabs.map((tab) => (
+                            <li 
+                                className={`nav-item ${activeTab === tab.id ? 'active' : ''}`} //Условие
+                                role="presentation" 
+                                key={tab.id}
+                                onClick={() => setActiveTab(tab.id)}
+                            >
+                                <div className="nav-item-row" >
+                                    <span className={`icon ${tab.iconCode}`}></span> {/* icon - здесь название класса (всеровно, что className="icon") */}
                                 </div>
                                 <h4>{tab.text}</h4>
                             </li>
@@ -37,47 +39,7 @@ const DeliciousArea = () => {
                     </ul>
                 </div>
                 
-                {/* <div className="tablist-menu" role="tablist">
-                    <ul className="menu-nav">
-                        <li className="nav-item" role="presentation">
-                            <div className="nav-item-row">
-                                <img 
-                                    src={dinner} 
-                                    alt="Dinner icon" 
-                                    role="tab" 
-                                    tabIndex="0" 
-                                    onClick={() => console.log('Dinner tab clicked')} 
-                                /> 
-                            </div>
-                            <h4>Dinner</h4>
-                        </li>
-                        <li className="nav-item" role="presentation">
-                            <div className="nav-item-row">
-                                <img 
-                                    src={cofee} 
-                                    alt="Cofee icon"
-                                    role="tab"
-                                    tabIndex="0"
-                                    onClick={() => console.log('Cofee tab clicked')} 
-                                /> 
-                            </div>
-                            <h4>Breakfast</h4>
-                        </li>
-                        <li className="nav-item" role="presentation">
-                            <div className="nav-item-row">
-                                <img src={fork} 
-                                    alt="Fork icon" 
-                                    role="tab"
-                                    tabIndex="0"
-                                    onClick={() => console.log('Fork tab clicked')}
-                                /> 
-                            </div>
-                            <h4>Lunch</h4>
-                        </li>
-                    </ul>
-                </div> */}
-
-                <DeliciousTabsContent />
+                <DeliciousTabsContent content={contentData[activeTab]}/>
             </div>
         </div>
     );
