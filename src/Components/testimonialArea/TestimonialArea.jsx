@@ -38,7 +38,7 @@ const TestimonialArea = () => {
                                     </div>
                                     <div className="testimonial_author">
                                         <div class="thumb">
-                                            <img src={slide.src} alt="Authors pic" />~
+                                            <img src={slide.src} alt="Authors pic" />
                                         </div>
                                         <div className="name">
                                             <h3>{slide.authorsName}</h3>
