@@ -1,10 +1,11 @@
 
+import { slidesData } from "./testimonialSliders/testimonialSliderData";
+import TestimonialSlides from "./testimonialSliders/TestimonialSlides";
 
-import "./style.css"
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { slides } from "./testimonialSliderData";
+import "./style.css"
 
 
 
@@ -30,27 +31,8 @@ const TestimonialArea = () => {
 
                 <div className="testimonial-active">
                     <Slider {...settings}>
-                        {slides.map((slide) => (
-                            <div className="single-carousel" key={slide.id}>
-                                <div className="single_testmonial">
-                                    <div class="author_opinion">
-                                        <p>{slide.authorsOpinion}</p>
-                                    </div>
-                                    <div className="testimonial_author">
-                                        <div class="thumb">
-                                            <img src={slide.src} alt="Authors pic" />
-                                        </div>
-                                        <div className="name">
-                                            <h3>{slide.authorsName}</h3>
-                                            <ul className="icon-star-row">
-                                                {Array(5).fill(null).map((_, index) => ( // создаём массив из 5 элементов (пустых значений)
-                                                    <li className="icon-star" key={index}></li>
-                                                ))}; 
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        {slidesData.map((slideData) => (
+                            <TestimonialSlides key={slideData.id} testimonialSlideProps={slideData}/>
                         ))}
                     </Slider>
                 </div>

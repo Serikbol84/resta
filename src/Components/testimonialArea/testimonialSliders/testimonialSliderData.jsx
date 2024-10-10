@@ -1,8 +1,8 @@
 
-import author1 from "../../img/testimonial/author.png"
-import author2 from "../../img/testimonial/author2.png"
+import author1 from "../../../img/testimonial/author.png"
+import author2 from "../../../img/testimonial/author2.png"
 
-const slides = [
+const slidesData = [
     {
         id: 'slide-1', 
         authorsOpinion: '“Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.',
@@ -41,4 +41,4 @@ const slides = [
     }
 ];
 
-export {slides};
+export { slidesData };

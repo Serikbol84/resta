@@ -1,8 +1,8 @@
 .about-area {
     padding-top: 160px;
     padding-bottom: 320px;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     background: #FFFBF5;
     position: relative;
 }
@@ -23,11 +23,6 @@
     position: absolute;
     right: 4%;
     bottom: 10%;
-}
-
-.container {
-    display: flex;
-    /* padding: 0 15px; */
 }
 
 .about-area-row {
