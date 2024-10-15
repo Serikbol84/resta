@@ -17,7 +17,7 @@ const TestimonialSlides = ({ testimonialSlideProps }) => {
                         <ul className="icon-star-row">
                             {Array(5).fill(null).map((_, index) => ( // создаём массив из 5 элементов (пустых значений)
                                 <li className="icon-star" key={index}></li>
-                            ))}; 
+                            ))}
                         </ul>
                     </div>
                 </div>
